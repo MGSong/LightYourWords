@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44A7BC3E1DDCF6BE006C8C1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A7BC3D1DDCF6BE006C8C1E /* main.m */; };
+		44A7BC411DDCF6BE006C8C1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A7BC401DDCF6BE006C8C1E /* AppDelegate.m */; };
+		44A7BC441DDCF6BE006C8C1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A7BC431DDCF6BE006C8C1E /* ViewController.m */; };
+		44A7BC471DDCF6BE006C8C1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC451DDCF6BE006C8C1E /* Main.storyboard */; };
+		44A7BC4A1DDCF6BE006C8C1E /* LightYourWords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44A7BC481DDCF6BE006C8C1E /* LightYourWords.xcdatamodeld */; };
+		44A7BC4C1DDCF6BE006C8C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC4B1DDCF6BE006C8C1E /* Assets.xcassets */; };
+		44A7BC4F1DDCF6BE006C8C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC4D1DDCF6BE006C8C1E /* LaunchScreen.storyboard */; };
+		44A7BC631DDCFF08006C8C1E /* LightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A7BC621DDCFF07006C8C1E /* LightsViewController.m */; };
+		44A7BC651DDCFFE6006C8C1E /* LightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */; };
+		44A7BC671DDD3F72006C8C1E /* mic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC661DDD3F72006C8C1E /* mic@2x.png */; };
+		44A7BC691DDD40A9006C8C1E /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC681DDD40A9006C8C1E /* stop@2x.png */; };
+		44EA9E5E1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */; };
+		44EA9E5F1DDFB5B0003AAE0A /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */; };
+		44EA9E601DDFB5B0003AAE0A /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */; };
+		44EA9E621DDFB5D5003AAE0A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E611DDFB5D5003AAE0A /* AVFoundation.framework */; };
+		44EA9E641DDFB5E0003AAE0A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E631DDFB5E0003AAE0A /* AudioToolbox.framework */; };
+		44EA9E771DDFB97D003AAE0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E761DDFB97D003AAE0A /* CoreGraphics.framework */; };
+		44EA9E791DDFB997003AAE0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E781DDFB997003AAE0A /* UIKit.framework */; };
+		44EA9E7B1DDFB9CE003AAE0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E7A1DDFB9CE003AAE0A /* Foundation.framework */; };
+		44EA9E7C1DDFB9E2003AAE0A /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E651DDFB95D003AAE0A /* HueSDK_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		44A7BC391DDCF6BE006C8C1E /* LightYourWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightYourWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A7BC3D1DDCF6BE006C8C1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		44A7BC3F1DDCF6BE006C8C1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		44A7BC401DDCF6BE006C8C1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		44A7BC421DDCF6BE006C8C1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		44A7BC431DDCF6BE006C8C1E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		44A7BC461DDCF6BE006C8C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44A7BC491DDCF6BE006C8C1E /* LightYourWords.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LightYourWords.xcdatamodel; sourceTree = "<group>"; };
+		44A7BC4B1DDCF6BE006C8C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44A7BC4E1DDCF6BE006C8C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44A7BC501DDCF6BE006C8C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44A7BC611DDCFF07006C8C1E /* LightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightsViewController.h; sourceTree = "<group>"; };
+		44A7BC621DDCFF07006C8C1E /* LightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightsViewController.m; sourceTree = "<group>"; };
+		44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightsViewController.xib; sourceTree = "<group>"; };
+		44A7BC661DDD3F72006C8C1E /* mic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic@2x.png"; sourceTree = "<group>"; };
+		44A7BC681DDD40A9006C8C1E /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
+		44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		44EA9E611DDFB5D5003AAE0A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		44EA9E631DDFB5E0003AAE0A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		44EA9E651DDFB95D003AAE0A /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HueSDK_iOS.framework; sourceTree = "<group>"; };
+		44EA9E671DDFB95D003AAE0A /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		44EA9E681DDFB95D003AAE0A /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		44EA9E691DDFB95D003AAE0A /* DDASLLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		44EA9E6A1DDFB95D003AAE0A /* DDASLLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		44EA9E6B1DDFB95D003AAE0A /* DDFileLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		44EA9E6C1DDFB95D003AAE0A /* DDFileLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		44EA9E6D1DDFB95D003AAE0A /* DDLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		44EA9E6E1DDFB95D003AAE0A /* DDLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		44EA9E6F1DDFB95D003AAE0A /* DDTTYLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		44EA9E701DDFB95D003AAE0A /* DDTTYLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		44EA9E721DDFB95D003AAE0A /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		44EA9E731DDFB95D003AAE0A /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		44EA9E741DDFB95D003AAE0A /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		44EA9E751DDFB95D003AAE0A /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		44EA9E761DDFB97D003AAE0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		44EA9E781DDFB997003AAE0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		44EA9E7A1DDFB9CE003AAE0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44A7BC361DDCF6BE006C8C1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44EA9E7C1DDFB9E2003AAE0A /* HueSDK_iOS.framework in Frameworks */,
+				44EA9E7B1DDFB9CE003AAE0A /* Foundation.framework in Frameworks */,
+				44EA9E791DDFB997003AAE0A /* UIKit.framework in Frameworks */,
+				44EA9E771DDFB97D003AAE0A /* CoreGraphics.framework in Frameworks */,
+				44EA9E641DDFB5E0003AAE0A /* AudioToolbox.framework in Frameworks */,
+				44EA9E621DDFB5D5003AAE0A /* AVFoundation.framework in Frameworks */,
+				44EA9E601DDFB5B0003AAE0A /* Slt.framework in Frameworks */,
+				44EA9E5F1DDFB5B0003AAE0A /* OpenEars.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44A7BC301DDCF6BE006C8C1E = {
+			isa = PBXGroup;
+			children = (
+				44A7BC3B1DDCF6BE006C8C1E /* LightYourWords */,
+				44A7BC3A1DDCF6BE006C8C1E /* Products */,
+				44EA9E311DDFB351003AAE0A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		44A7BC3A1DDCF6BE006C8C1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44A7BC391DDCF6BE006C8C1E /* LightYourWords.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44A7BC3B1DDCF6BE006C8C1E /* LightYourWords */ = {
+			isa = PBXGroup;
+			children = (
+				44A7BC681DDD40A9006C8C1E /* stop@2x.png */,
+				44A7BC661DDD3F72006C8C1E /* mic@2x.png */,
+				44A7BC611DDCFF07006C8C1E /* LightsViewController.h */,
+				44A7BC621DDCFF07006C8C1E /* LightsViewController.m */,
+				44A7BC3F1DDCF6BE006C8C1E /* AppDelegate.h */,
+				44A7BC401DDCF6BE006C8C1E /* AppDelegate.m */,
+				44A7BC421DDCF6BE006C8C1E /* ViewController.h */,
+				44A7BC431DDCF6BE006C8C1E /* ViewController.m */,
+				44A7BC451DDCF6BE006C8C1E /* Main.storyboard */,
+				44A7BC4B1DDCF6BE006C8C1E /* Assets.xcassets */,
+				44A7BC4D1DDCF6BE006C8C1E /* LaunchScreen.storyboard */,
+				44A7BC501DDCF6BE006C8C1E /* Info.plist */,
+				44A7BC481DDCF6BE006C8C1E /* LightYourWords.xcdatamodeld */,
+				44A7BC3C1DDCF6BE006C8C1E /* Supporting Files */,
+				44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */,
+			);
+			path = LightYourWords;
+			sourceTree = "<group>";
+		};
+		44A7BC3C1DDCF6BE006C8C1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44A7BC3D1DDCF6BE006C8C1E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44EA9E311DDFB351003AAE0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44EA9E7A1DDFB9CE003AAE0A /* Foundation.framework */,
+				44EA9E781DDFB997003AAE0A /* UIKit.framework */,
+				44EA9E761DDFB97D003AAE0A /* CoreGraphics.framework */,
+				44EA9E651DDFB95D003AAE0A /* HueSDK_iOS.framework */,
+				44EA9E661DDFB95D003AAE0A /* Lumberjack */,
+				44EA9E631DDFB5E0003AAE0A /* AudioToolbox.framework */,
+				44EA9E611DDFB5D5003AAE0A /* AVFoundation.framework */,
+				44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */,
+				44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */,
+				44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44EA9E661DDFB95D003AAE0A /* Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				44EA9E671DDFB95D003AAE0A /* DDAbstractDatabaseLogger.h */,
+				44EA9E681DDFB95D003AAE0A /* DDAbstractDatabaseLogger.m */,
+				44EA9E691DDFB95D003AAE0A /* DDASLLogger.h */,
+				44EA9E6A1DDFB95D003AAE0A /* DDASLLogger.m */,
+				44EA9E6B1DDFB95D003AAE0A /* DDFileLogger.h */,
+				44EA9E6C1DDFB95D003AAE0A /* DDFileLogger.m */,
+				44EA9E6D1DDFB95D003AAE0A /* DDLog.h */,
+				44EA9E6E1DDFB95D003AAE0A /* DDLog.m */,
+				44EA9E6F1DDFB95D003AAE0A /* DDTTYLogger.h */,
+				44EA9E701DDFB95D003AAE0A /* DDTTYLogger.m */,
+				44EA9E711DDFB95D003AAE0A /* Extensions */,
+			);
+			path = Lumberjack;
+			sourceTree = "<group>";
+		};
+		44EA9E711DDFB95D003AAE0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44EA9E721DDFB95D003AAE0A /* ContextFilterLogFormatter.h */,
+				44EA9E731DDFB95D003AAE0A /* ContextFilterLogFormatter.m */,
+				44EA9E741DDFB95D003AAE0A /* DispatchQueueLogFormatter.h */,
+				44EA9E751DDFB95D003AAE0A /* DispatchQueueLogFormatter.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44A7BC381DDCF6BE006C8C1E /* LightYourWords */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44A7BC531DDCF6BE006C8C1E /* Build configuration list for PBXNativeTarget "LightYourWords" */;
+			buildPhases = (
+				44A7BC351DDCF6BE006C8C1E /* Sources */,
+				44A7BC361DDCF6BE006C8C1E /* Frameworks */,
+				44A7BC371DDCF6BE006C8C1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LightYourWords;
+			productName = LightYourWords;
+			productReference = 44A7BC391DDCF6BE006C8C1E /* LightYourWords.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44A7BC311DDCF6BE006C8C1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Yevhen Kim";
+				TargetAttributes = {
+					44A7BC381DDCF6BE006C8C1E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9GETBPY526;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 44A7BC341DDCF6BE006C8C1E /* Build configuration list for PBXProject "LightYourWords" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44A7BC301DDCF6BE006C8C1E;
+			productRefGroup = 44A7BC3A1DDCF6BE006C8C1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44A7BC381DDCF6BE006C8C1E /* LightYourWords */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44A7BC371DDCF6BE006C8C1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44A7BC4F1DDCF6BE006C8C1E /* LaunchScreen.storyboard in Resources */,
+				44A7BC4C1DDCF6BE006C8C1E /* Assets.xcassets in Resources */,
+				44A7BC691DDD40A9006C8C1E /* stop@2x.png in Resources */,
+				44A7BC671DDD3F72006C8C1E /* mic@2x.png in Resources */,
+				44A7BC471DDCF6BE006C8C1E /* Main.storyboard in Resources */,
+				44A7BC651DDCFFE6006C8C1E /* LightsViewController.xib in Resources */,
+				44EA9E5E1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44A7BC351DDCF6BE006C8C1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44A7BC441DDCF6BE006C8C1E /* ViewController.m in Sources */,
+				44A7BC4A1DDCF6BE006C8C1E /* LightYourWords.xcdatamodeld in Sources */,
+				44A7BC411DDCF6BE006C8C1E /* AppDelegate.m in Sources */,
+				44A7BC631DDCFF08006C8C1E /* LightsViewController.m in Sources */,
+				44A7BC3E1DDCF6BE006C8C1E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		44A7BC451DDCF6BE006C8C1E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44A7BC461DDCF6BE006C8C1E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		44A7BC4D1DDCF6BE006C8C1E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44A7BC4E1DDCF6BE006C8C1E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44A7BC511DDCF6BE006C8C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		44A7BC521DDCF6BE006C8C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44A7BC541DDCF6BE006C8C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = 9GETBPY526;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Framework",
+				);
+				INFOPLIST_FILE = LightYourWords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yevhenkim.LightYourWords;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		44A7BC551DDCF6BE006C8C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = 9GETBPY526;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Framework",
+				);
+				INFOPLIST_FILE = LightYourWords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yevhenkim.LightYourWords;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44A7BC341DDCF6BE006C8C1E /* Build configuration list for PBXProject "LightYourWords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44A7BC511DDCF6BE006C8C1E /* Debug */,
+				44A7BC521DDCF6BE006C8C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44A7BC531DDCF6BE006C8C1E /* Build configuration list for PBXNativeTarget "LightYourWords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44A7BC541DDCF6BE006C8C1E /* Debug */,
+				44A7BC551DDCF6BE006C8C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		44A7BC481DDCF6BE006C8C1E /* LightYourWords.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				44A7BC491DDCF6BE006C8C1E /* LightYourWords.xcdatamodel */,
+			);
+			currentVersion = 44A7BC491DDCF6BE006C8C1E /* LightYourWords.xcdatamodel */;
+			path = LightYourWords.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 44A7BC311DDCF6BE006C8C1E /* Project object */;
+}
