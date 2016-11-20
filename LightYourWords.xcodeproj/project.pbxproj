@@ -16,8 +16,6 @@
 		44A7BC4F1DDCF6BE006C8C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC4D1DDCF6BE006C8C1E /* LaunchScreen.storyboard */; };
 		44A7BC631DDCFF08006C8C1E /* LightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A7BC621DDCFF07006C8C1E /* LightsViewController.m */; };
 		44A7BC651DDCFFE6006C8C1E /* LightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */; };
-		44A7BC671DDD3F72006C8C1E /* mic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC661DDD3F72006C8C1E /* mic@2x.png */; };
-		44A7BC691DDD40A9006C8C1E /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC681DDD40A9006C8C1E /* stop@2x.png */; };
 		44EA9E5E1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */; };
 		44EA9E5F1DDFB5B0003AAE0A /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */; };
 		44EA9E601DDFB5B0003AAE0A /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */; };
@@ -27,6 +25,28 @@
 		44EA9E791DDFB997003AAE0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E781DDFB997003AAE0A /* UIKit.framework */; };
 		44EA9E7B1DDFB9CE003AAE0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E7A1DDFB9CE003AAE0A /* Foundation.framework */; };
 		44EA9E7C1DDFB9E2003AAE0A /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E651DDFB95D003AAE0A /* HueSDK_iOS.framework */; };
+		44EA9E7F1DDFE8A0003AAE0A /* press_smartbridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E7D1DDFE8A0003AAE0A /* press_smartbridge.png */; };
+		44EA9E801DDFE8A0003AAE0A /* press_smartbridge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E7E1DDFE8A0003AAE0A /* press_smartbridge@2x.png */; };
+		44EA9E821DDFE8D4003AAE0A /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E811DDFE8D4003AAE0A /* LoadingViewController.xib */; };
+		44EA9E861DDFEB3C003AAE0A /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9E851DDFEB3C003AAE0A /* LoadingViewController.m */; };
+		44EA9E881DDFF087003AAE0A /* BridgeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E871DDFF087003AAE0A /* BridgeSelectionViewController.xib */; };
+		44EA9E8B1DDFF181003AAE0A /* BridgeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9E8A1DDFF181003AAE0A /* BridgeSelectionViewController.m */; };
+		44EA9E8D1DDFF718003AAE0A /* BridgePushLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E8C1DDFF718003AAE0A /* BridgePushLinkViewController.xib */; };
+		44EA9E901DDFF82B003AAE0A /* BridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9E8F1DDFF82B003AAE0A /* BridgePushLinkViewController.m */; };
+		44EA9EBD1DE01462003AAE0A /* ContextFilterLogFormatter.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EAF1DE01462003AAE0A /* ContextFilterLogFormatter.h */; };
+		44EA9EBE1DE01462003AAE0A /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB01DE01462003AAE0A /* ContextFilterLogFormatter.m */; };
+		44EA9EBF1DE01462003AAE0A /* DDAbstractDatabaseLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB11DE01462003AAE0A /* DDAbstractDatabaseLogger.h */; };
+		44EA9EC01DE01462003AAE0A /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB21DE01462003AAE0A /* DDAbstractDatabaseLogger.m */; };
+		44EA9EC11DE01462003AAE0A /* DDASLLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB31DE01462003AAE0A /* DDASLLogger.h */; };
+		44EA9EC21DE01462003AAE0A /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB41DE01462003AAE0A /* DDASLLogger.m */; };
+		44EA9EC31DE01462003AAE0A /* DDFileLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB51DE01462003AAE0A /* DDFileLogger.h */; };
+		44EA9EC41DE01462003AAE0A /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB61DE01462003AAE0A /* DDFileLogger.m */; };
+		44EA9EC51DE01462003AAE0A /* DDLog.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB71DE01462003AAE0A /* DDLog.h */; };
+		44EA9EC61DE01462003AAE0A /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB81DE01462003AAE0A /* DDLog.m */; };
+		44EA9EC71DE01462003AAE0A /* DDTTYLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB91DE01462003AAE0A /* DDTTYLogger.h */; };
+		44EA9EC81DE01462003AAE0A /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EBA1DE01462003AAE0A /* DDTTYLogger.m */; };
+		44EA9EC91DE01462003AAE0A /* DispatchQueueLogFormatter.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EBB1DE01462003AAE0A /* DispatchQueueLogFormatter.h */; };
+		44EA9ECA1DE01462003AAE0A /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EBC1DE01462003AAE0A /* DispatchQueueLogFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,31 +64,41 @@
 		44A7BC611DDCFF07006C8C1E /* LightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightsViewController.h; sourceTree = "<group>"; };
 		44A7BC621DDCFF07006C8C1E /* LightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightsViewController.m; sourceTree = "<group>"; };
 		44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightsViewController.xib; sourceTree = "<group>"; };
-		44A7BC661DDD3F72006C8C1E /* mic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic@2x.png"; sourceTree = "<group>"; };
-		44A7BC681DDD40A9006C8C1E /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
 		44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
 		44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
 		44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
 		44EA9E611DDFB5D5003AAE0A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		44EA9E631DDFB5E0003AAE0A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		44EA9E651DDFB95D003AAE0A /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HueSDK_iOS.framework; sourceTree = "<group>"; };
-		44EA9E671DDFB95D003AAE0A /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
-		44EA9E681DDFB95D003AAE0A /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
-		44EA9E691DDFB95D003AAE0A /* DDASLLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		44EA9E6A1DDFB95D003AAE0A /* DDASLLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
-		44EA9E6B1DDFB95D003AAE0A /* DDFileLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
-		44EA9E6C1DDFB95D003AAE0A /* DDFileLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
-		44EA9E6D1DDFB95D003AAE0A /* DDLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
-		44EA9E6E1DDFB95D003AAE0A /* DDLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
-		44EA9E6F1DDFB95D003AAE0A /* DDTTYLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
-		44EA9E701DDFB95D003AAE0A /* DDTTYLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
-		44EA9E721DDFB95D003AAE0A /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
-		44EA9E731DDFB95D003AAE0A /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
-		44EA9E741DDFB95D003AAE0A /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		44EA9E751DDFB95D003AAE0A /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		44EA9E761DDFB97D003AAE0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		44EA9E781DDFB997003AAE0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44EA9E7A1DDFB9CE003AAE0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		44EA9E7D1DDFE8A0003AAE0A /* press_smartbridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = press_smartbridge.png; sourceTree = "<group>"; };
+		44EA9E7E1DDFE8A0003AAE0A /* press_smartbridge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "press_smartbridge@2x.png"; sourceTree = "<group>"; };
+		44EA9E811DDFE8D4003AAE0A /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		44EA9E841DDFEB3C003AAE0A /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		44EA9E851DDFEB3C003AAE0A /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		44EA9E871DDFF087003AAE0A /* BridgeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BridgeSelectionViewController.xib; sourceTree = "<group>"; };
+		44EA9E891DDFF181003AAE0A /* BridgeSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeSelectionViewController.h; sourceTree = "<group>"; };
+		44EA9E8A1DDFF181003AAE0A /* BridgeSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeSelectionViewController.m; sourceTree = "<group>"; };
+		44EA9E8C1DDFF718003AAE0A /* BridgePushLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BridgePushLinkViewController.xib; sourceTree = "<group>"; };
+		44EA9E8E1DDFF82B003AAE0A /* BridgePushLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgePushLinkViewController.h; sourceTree = "<group>"; };
+		44EA9E8F1DDFF82B003AAE0A /* BridgePushLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgePushLinkViewController.m; sourceTree = "<group>"; };
+		44EA9E911DE010E9003AAE0A /* HueQuickStartApp-iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HueQuickStartApp-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		44EA9EAF1DE01462003AAE0A /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		44EA9EB01DE01462003AAE0A /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		44EA9EB11DE01462003AAE0A /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		44EA9EB21DE01462003AAE0A /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		44EA9EB31DE01462003AAE0A /* DDASLLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		44EA9EB41DE01462003AAE0A /* DDASLLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		44EA9EB51DE01462003AAE0A /* DDFileLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		44EA9EB61DE01462003AAE0A /* DDFileLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		44EA9EB71DE01462003AAE0A /* DDLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		44EA9EB81DE01462003AAE0A /* DDLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		44EA9EB91DE01462003AAE0A /* DDTTYLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		44EA9EBA1DE01462003AAE0A /* DDTTYLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		44EA9EBB1DE01462003AAE0A /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		44EA9EBC1DE01462003AAE0A /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +123,7 @@
 		44A7BC301DDCF6BE006C8C1E = {
 			isa = PBXGroup;
 			children = (
+				44E8796A1DE20B2B00A14C57 /* Lamberjack */,
 				44A7BC3B1DDCF6BE006C8C1E /* LightYourWords */,
 				44A7BC3A1DDCF6BE006C8C1E /* Products */,
 				44EA9E311DDFB351003AAE0A /* Frameworks */,
@@ -110,21 +141,20 @@
 		44A7BC3B1DDCF6BE006C8C1E /* LightYourWords */ = {
 			isa = PBXGroup;
 			children = (
-				44A7BC681DDD40A9006C8C1E /* stop@2x.png */,
-				44A7BC661DDD3F72006C8C1E /* mic@2x.png */,
+				44EA9E8E1DDFF82B003AAE0A /* BridgePushLinkViewController.h */,
+				44EA9E8F1DDFF82B003AAE0A /* BridgePushLinkViewController.m */,
+				44EA9E891DDFF181003AAE0A /* BridgeSelectionViewController.h */,
+				44EA9E8A1DDFF181003AAE0A /* BridgeSelectionViewController.m */,
+				44EA9E841DDFEB3C003AAE0A /* LoadingViewController.h */,
+				44EA9E851DDFEB3C003AAE0A /* LoadingViewController.m */,
 				44A7BC611DDCFF07006C8C1E /* LightsViewController.h */,
 				44A7BC621DDCFF07006C8C1E /* LightsViewController.m */,
 				44A7BC3F1DDCF6BE006C8C1E /* AppDelegate.h */,
 				44A7BC401DDCF6BE006C8C1E /* AppDelegate.m */,
 				44A7BC421DDCF6BE006C8C1E /* ViewController.h */,
 				44A7BC431DDCF6BE006C8C1E /* ViewController.m */,
-				44A7BC451DDCF6BE006C8C1E /* Main.storyboard */,
-				44A7BC4B1DDCF6BE006C8C1E /* Assets.xcassets */,
-				44A7BC4D1DDCF6BE006C8C1E /* LaunchScreen.storyboard */,
-				44A7BC501DDCF6BE006C8C1E /* Info.plist */,
-				44A7BC481DDCF6BE006C8C1E /* LightYourWords.xcdatamodeld */,
+				44EA9E831DDFE90D003AAE0A /* Images */,
 				44A7BC3C1DDCF6BE006C8C1E /* Supporting Files */,
-				44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */,
 			);
 			path = LightYourWords;
 			sourceTree = "<group>";
@@ -132,9 +162,40 @@
 		44A7BC3C1DDCF6BE006C8C1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				44EA9E8C1DDFF718003AAE0A /* BridgePushLinkViewController.xib */,
+				44EA9E871DDFF087003AAE0A /* BridgeSelectionViewController.xib */,
+				44EA9E811DDFE8D4003AAE0A /* LoadingViewController.xib */,
+				44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */,
+				44A7BC481DDCF6BE006C8C1E /* LightYourWords.xcdatamodeld */,
+				44A7BC501DDCF6BE006C8C1E /* Info.plist */,
+				44A7BC4B1DDCF6BE006C8C1E /* Assets.xcassets */,
+				44A7BC451DDCF6BE006C8C1E /* Main.storyboard */,
+				44A7BC4D1DDCF6BE006C8C1E /* LaunchScreen.storyboard */,
 				44A7BC3D1DDCF6BE006C8C1E /* main.m */,
+				44EA9E911DE010E9003AAE0A /* HueQuickStartApp-iOS-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44E8796A1DE20B2B00A14C57 /* Lamberjack */ = {
+			isa = PBXGroup;
+			children = (
+				44EA9EAF1DE01462003AAE0A /* ContextFilterLogFormatter.h */,
+				44EA9EB01DE01462003AAE0A /* ContextFilterLogFormatter.m */,
+				44EA9EB11DE01462003AAE0A /* DDAbstractDatabaseLogger.h */,
+				44EA9EB21DE01462003AAE0A /* DDAbstractDatabaseLogger.m */,
+				44EA9EB31DE01462003AAE0A /* DDASLLogger.h */,
+				44EA9EB41DE01462003AAE0A /* DDASLLogger.m */,
+				44EA9EB51DE01462003AAE0A /* DDFileLogger.h */,
+				44EA9EB61DE01462003AAE0A /* DDFileLogger.m */,
+				44EA9EB71DE01462003AAE0A /* DDLog.h */,
+				44EA9EB81DE01462003AAE0A /* DDLog.m */,
+				44EA9EB91DE01462003AAE0A /* DDTTYLogger.h */,
+				44EA9EBA1DE01462003AAE0A /* DDTTYLogger.m */,
+				44EA9EBB1DE01462003AAE0A /* DispatchQueueLogFormatter.h */,
+				44EA9EBC1DE01462003AAE0A /* DispatchQueueLogFormatter.m */,
+			);
+			name = Lamberjack;
 			sourceTree = "<group>";
 		};
 		44EA9E311DDFB351003AAE0A /* Frameworks */ = {
@@ -144,7 +205,6 @@
 				44EA9E781DDFB997003AAE0A /* UIKit.framework */,
 				44EA9E761DDFB97D003AAE0A /* CoreGraphics.framework */,
 				44EA9E651DDFB95D003AAE0A /* HueSDK_iOS.framework */,
-				44EA9E661DDFB95D003AAE0A /* Lumberjack */,
 				44EA9E631DDFB5E0003AAE0A /* AudioToolbox.framework */,
 				44EA9E611DDFB5D5003AAE0A /* AVFoundation.framework */,
 				44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */,
@@ -154,33 +214,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		44EA9E661DDFB95D003AAE0A /* Lumberjack */ = {
+		44EA9E831DDFE90D003AAE0A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				44EA9E671DDFB95D003AAE0A /* DDAbstractDatabaseLogger.h */,
-				44EA9E681DDFB95D003AAE0A /* DDAbstractDatabaseLogger.m */,
-				44EA9E691DDFB95D003AAE0A /* DDASLLogger.h */,
-				44EA9E6A1DDFB95D003AAE0A /* DDASLLogger.m */,
-				44EA9E6B1DDFB95D003AAE0A /* DDFileLogger.h */,
-				44EA9E6C1DDFB95D003AAE0A /* DDFileLogger.m */,
-				44EA9E6D1DDFB95D003AAE0A /* DDLog.h */,
-				44EA9E6E1DDFB95D003AAE0A /* DDLog.m */,
-				44EA9E6F1DDFB95D003AAE0A /* DDTTYLogger.h */,
-				44EA9E701DDFB95D003AAE0A /* DDTTYLogger.m */,
-				44EA9E711DDFB95D003AAE0A /* Extensions */,
+				44EA9E7D1DDFE8A0003AAE0A /* press_smartbridge.png */,
+				44EA9E7E1DDFE8A0003AAE0A /* press_smartbridge@2x.png */,
 			);
-			path = Lumberjack;
-			sourceTree = "<group>";
-		};
-		44EA9E711DDFB95D003AAE0A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				44EA9E721DDFB95D003AAE0A /* ContextFilterLogFormatter.h */,
-				44EA9E731DDFB95D003AAE0A /* ContextFilterLogFormatter.m */,
-				44EA9E741DDFB95D003AAE0A /* DispatchQueueLogFormatter.h */,
-				44EA9E751DDFB95D003AAE0A /* DispatchQueueLogFormatter.m */,
-			);
-			path = Extensions;
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,13 +282,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44EA9E7F1DDFE8A0003AAE0A /* press_smartbridge.png in Resources */,
 				44A7BC4F1DDCF6BE006C8C1E /* LaunchScreen.storyboard in Resources */,
 				44A7BC4C1DDCF6BE006C8C1E /* Assets.xcassets in Resources */,
-				44A7BC691DDD40A9006C8C1E /* stop@2x.png in Resources */,
-				44A7BC671DDD3F72006C8C1E /* mic@2x.png in Resources */,
+				44EA9E801DDFE8A0003AAE0A /* press_smartbridge@2x.png in Resources */,
 				44A7BC471DDCF6BE006C8C1E /* Main.storyboard in Resources */,
 				44A7BC651DDCFFE6006C8C1E /* LightsViewController.xib in Resources */,
 				44EA9E5E1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle in Resources */,
+				44EA9E821DDFE8D4003AAE0A /* LoadingViewController.xib in Resources */,
+				44EA9E8D1DDFF718003AAE0A /* BridgePushLinkViewController.xib in Resources */,
+				44EA9E881DDFF087003AAE0A /* BridgeSelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +302,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44EA9EBD1DE01462003AAE0A /* ContextFilterLogFormatter.h in Sources */,
+				44EA9EBE1DE01462003AAE0A /* ContextFilterLogFormatter.m in Sources */,
+				44EA9EBF1DE01462003AAE0A /* DDAbstractDatabaseLogger.h in Sources */,
+				44EA9EC01DE01462003AAE0A /* DDAbstractDatabaseLogger.m in Sources */,
+				44EA9EC11DE01462003AAE0A /* DDASLLogger.h in Sources */,
+				44EA9EC21DE01462003AAE0A /* DDASLLogger.m in Sources */,
+				44EA9EC31DE01462003AAE0A /* DDFileLogger.h in Sources */,
+				44EA9EC41DE01462003AAE0A /* DDFileLogger.m in Sources */,
+				44EA9EC51DE01462003AAE0A /* DDLog.h in Sources */,
+				44EA9EC61DE01462003AAE0A /* DDLog.m in Sources */,
+				44EA9EC71DE01462003AAE0A /* DDTTYLogger.h in Sources */,
+				44EA9EC81DE01462003AAE0A /* DDTTYLogger.m in Sources */,
+				44EA9EC91DE01462003AAE0A /* DispatchQueueLogFormatter.h in Sources */,
+				44EA9ECA1DE01462003AAE0A /* DispatchQueueLogFormatter.m in Sources */,
 				44A7BC441DDCF6BE006C8C1E /* ViewController.m in Sources */,
+				44EA9E861DDFEB3C003AAE0A /* LoadingViewController.m in Sources */,
 				44A7BC4A1DDCF6BE006C8C1E /* LightYourWords.xcdatamodeld in Sources */,
+				44EA9E901DDFF82B003AAE0A /* BridgePushLinkViewController.m in Sources */,
 				44A7BC411DDCF6BE006C8C1E /* AppDelegate.m in Sources */,
 				44A7BC631DDCFF08006C8C1E /* LightsViewController.m in Sources */,
+				44EA9E8B1DDFF181003AAE0A /* BridgeSelectionViewController.m in Sources */,
 				44A7BC3E1DDCF6BE006C8C1E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +453,8 @@
 				INFOPLIST_FILE = LightYourWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yevhenkim.LightYourWords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +474,7 @@
 				INFOPLIST_FILE = LightYourWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yevhenkim.LightYourWords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -32,27 +32,80 @@
 
 @implementation LightsViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.fliteController = [[OEFliteController alloc] init];
-    self.slt = [[Slt alloc] init];
-    self.openEarsEventsObserver = [[OEEventsObserver alloc] init];
-    self.openEarsEventsObserver.delegate = self;
+    PHNotificationManager *notificationManager = [PHNotificationManager defaultManager];
+    //register for the local heartbeat notifications
+    [notificationManager registerObject:self withSelector:@selector(localConnection) forNotification:LOCAL_CONNECTION_NOTIFICATION];
+    [notificationManager registerObject:self withSelector:@selector(noLocalConnection) forNotification:NO_LOCAL_CONNECTION_NOTIFICATION];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Find Bridge" style:UIBarButtonItemStylePlain target:self action:@selector(findNewBridgeButtonAction)];
+    self.navigationItem.title = @"Quick Start";
     
-    self.restartAttemptsDueToPermissionRequests = 0;
-    self.startupFailedDueToLackOfPermissions = FALSE;
-    
-    [OELogging startOpenEarsLogging];
-    [OEPocketsphinxController sharedInstance].verbosePocketSphinx = TRUE;
-    [self.openEarsEventsObserver setDelegate:self];
-    [[OEPocketsphinxController sharedInstance] setActive:TRUE error:nil];
-    [self prepareDynamicLanguageGenerator];
-    
-    self.startButton.hidden = TRUE;
 }
+
+- (void)localConnection{
+    
+    [self loadConnectedBridgeValues];
+    
+}
+
+- (void)noLocalConnection{
+
+}
+
+- (void)loadConnectedBridgeValues{
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    
+    // Check if we have connected to a bridge before
+    if (cache != nil && cache.bridgeConfiguration != nil && cache.bridgeConfiguration.ipaddress != nil){
+        
+        // Check if we are connected to the bridge right now
+        if (UIAppDelegate.phHueSDK.localConnected) {
+            
+            // Show current time as last successful heartbeat time when we are connected to a bridge
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateStyle:NSDateFormatterNoStyle];
+            [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+
+        }
+        self.fliteController = [[OEFliteController alloc] init];
+        self.slt = [[Slt alloc] init];
+        self.openEarsEventsObserver = [[OEEventsObserver alloc] init];
+        self.openEarsEventsObserver.delegate = self;
+        
+        
+        self.restartAttemptsDueToPermissionRequests = 0;
+        self.startupFailedDueToLackOfPermissions = FALSE;
+        
+        [OELogging startOpenEarsLogging];
+        [OEPocketsphinxController sharedInstance].verbosePocketSphinx = TRUE;
+        [self.openEarsEventsObserver setDelegate:self];
+        [[OEPocketsphinxController sharedInstance] setActive:TRUE error:nil];
+        [self prepareDynamicLanguageGenerator];
+        
+        self.startButton.hidden = TRUE;
+    }
+}
+
+- (IBAction)selectOtherBridge:(id)sender{
+    [UIAppDelegate searchForBridgeLocal];
+}
+
+- (void)findNewBridgeButtonAction{
+    [UIAppDelegate searchForBridgeLocal];
+}
+
 
 #pragma mark - setting up dynamic language generator
 
@@ -156,6 +209,7 @@
     }
     
     self.wordsRecognizerTextField.text = [NSString stringWithFormat:@"Heard: \"%@\"", hypothesis]; // Show it in the status box.
+    [self randomizeColoursOfConnectLights];
     
     // This is how to use an available instance of OEFliteController. We're going to repeat back the command that we heard with the voice we've chosen.
     [self.fliteController say:[NSString stringWithFormat:@"You said %@",hypothesis] withVoice:self.slt];
@@ -273,6 +327,32 @@
                 self.startupFailedDueToLackOfPermissions = FALSE;
             }
         }
+    }
+}
+
+#pragma mark - randomizing colors
+
+- (void)randomizeColoursOfConnectLights {
+    
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
+    
+    for (PHLight *light in cache.lights.allValues) {
+        
+        PHLightState *lightState = [[PHLightState alloc] init];
+        
+        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
+        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        
+        // Send lightstate to light
+        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
+            if (errors != nil) {
+                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+                
+                NSLog(@"Response: %@",message);
+            }
+        }];
     }
 }
 
