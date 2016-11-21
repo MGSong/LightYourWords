@@ -15,6 +15,7 @@
 #import <OpenEars/OELanguageModelGenerator.h>
 #import <OpenEars/OEAcousticModel.h>
 #import <OpenEars/OEPocketsphinxController.h>
+#import "Waver.h"
 
 @interface LightsViewController : UIViewController <OEEventsObserverDelegate>
 

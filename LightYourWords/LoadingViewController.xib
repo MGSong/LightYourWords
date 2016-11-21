@@ -24,7 +24,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLc-UI-Jjz">
                             <rect key="frame" x="0.0" y="96.5" width="121" height="24.5"/>
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -32,7 +32,7 @@
                             <rect key="frame" x="43" y="43" width="37" height="37"/>
                         </activityIndicatorView>
                     </subviews>
-                    <color key="backgroundColor" red="0.50232404470443726" green="0.91482192277908325" blue="0.82283741235733032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="wLc-UI-Jjz" secondAttribute="trailing" id="5dB-n8-QV2"/>
                         <constraint firstItem="dTd-V4-T6k" firstAttribute="centerY" secondItem="1Iq-pC-GKc" secondAttribute="centerY" constant="1" id="Au5-89-b8e"/>
@@ -43,7 +43,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.50232404470443726" green="0.91482192277908325" blue="0.82283741235733032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="1Iq-pC-GKc" firstAttribute="leading" secondItem="60r-hM-J6M" secondAttribute="leading" constant="127" id="GYW-bP-OCa"/>
                 <constraint firstItem="1Iq-pC-GKc" firstAttribute="top" secondItem="60r-hM-J6M" secondAttribute="top" constant="261" id="Gib-8n-c7h"/>

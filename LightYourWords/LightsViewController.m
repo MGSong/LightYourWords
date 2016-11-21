@@ -9,6 +9,7 @@
 #import "LightsViewController.h"
 #import "AppDelegate.h"
 #import <HueSDK_iOS/HueSDK.h>
+#import "Waver.h"
 
 #define MAX_HUE 65535
 
@@ -21,6 +22,8 @@
 @property (nonatomic, assign) int restartAttemptsDueToPermissionRequests;
 @property (nonatomic, assign) BOOL startupFailedDueToLackOfPermissions;
 
+@property (nonatomic, strong) AVAudioRecorder *recorder;
+@property (nonatomic, strong) 	NSTimer *uiUpdateTimer;
 
 // Things which help us show off the dynamic language features.
 @property (nonatomic, copy) NSString *pathToFirstDynamicallyGeneratedLanguageModel;
@@ -31,6 +34,15 @@
 @end
 
 @implementation LightsViewController
+
+#define kLevelUpdatesPerSecond 18 // We'll have the ui update 18 times a second to show some fluidity without hitting the CPU too hard.
+
+#pragma mark -
+#pragma mark Memory Management
+
+- (void)dealloc {
+    [self stopDisplayingLevels];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -50,69 +62,26 @@
     [notificationManager registerObject:self withSelector:@selector(noLocalConnection) forNotification:NO_LOCAL_CONNECTION_NOTIFICATION];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Find Bridge" style:UIBarButtonItemStylePlain target:self action:@selector(findNewBridgeButtonAction)];
-    self.navigationItem.title = @"Quick Start";
+    self.navigationItem.title = @"Quick Start" ;
+
+    self.fliteController = [[OEFliteController alloc] init];
+    self.slt = [[Slt alloc] init];
+    self.openEarsEventsObserver = [[OEEventsObserver alloc] init];
+    self.openEarsEventsObserver.delegate = self;
     
-}
-
-- (void)localConnection{
     
-    [self loadConnectedBridgeValues];
+    self.restartAttemptsDueToPermissionRequests = 0;
+    self.startupFailedDueToLackOfPermissions = FALSE;
     
-}
-
-- (void)noLocalConnection{
-
-}
-
-- (void)loadConnectedBridgeValues{
-    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    [OELogging startOpenEarsLogging];
+    [OEPocketsphinxController sharedInstance].verbosePocketSphinx = TRUE;
+    [self.openEarsEventsObserver setDelegate:self];
+    [[OEPocketsphinxController sharedInstance] setActive:FALSE error:nil];
     
-    // Check if we have connected to a bridge before
-    if (cache != nil && cache.bridgeConfiguration != nil && cache.bridgeConfiguration.ipaddress != nil){
-        
-        // Check if we are connected to the bridge right now
-        if (UIAppDelegate.phHueSDK.localConnected) {
-            
-            // Show current time as last successful heartbeat time when we are connected to a bridge
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setDateStyle:NSDateFormatterNoStyle];
-            [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-
-        }
-        self.fliteController = [[OEFliteController alloc] init];
-        self.slt = [[Slt alloc] init];
-        self.openEarsEventsObserver = [[OEEventsObserver alloc] init];
-        self.openEarsEventsObserver.delegate = self;
-        
-        
-        self.restartAttemptsDueToPermissionRequests = 0;
-        self.startupFailedDueToLackOfPermissions = FALSE;
-        
-        [OELogging startOpenEarsLogging];
-        [OEPocketsphinxController sharedInstance].verbosePocketSphinx = TRUE;
-        [self.openEarsEventsObserver setDelegate:self];
-        [[OEPocketsphinxController sharedInstance] setActive:TRUE error:nil];
-        [self prepareDynamicLanguageGenerator];
-        
-        self.startButton.hidden = TRUE;
-    }
-}
-
-- (IBAction)selectOtherBridge:(id)sender{
-    [UIAppDelegate searchForBridgeLocal];
-}
-
-- (void)findNewBridgeButtonAction{
-    [UIAppDelegate searchForBridgeLocal];
-}
-
-
-#pragma mark - setting up dynamic language generator
-
-- (void)prepareDynamicLanguageGenerator {
+    
     OELanguageModelGenerator *languageModelGenerator = [[OELanguageModelGenerator alloc]init];
     
-    NSArray *lamps = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"random"];
+    NSArray *lamps = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10"];
     NSError *error = [languageModelGenerator generateLanguageModelFromArray:lamps withFilesNamed:@"FirstOpenEarsDynamicLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]];
     
     if(error) {
@@ -159,12 +128,51 @@
         // graphics API you choose.
         
     }
+    
+    self.startButton.hidden = FALSE;
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+}
+
+- (void)localConnection{
+    
+    [self loadConnectedBridgeValues];
+    
+}
+
+- (void)loadConnectedBridgeValues{
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    
+    // Check if we have connected to a bridge before
+    if (cache != nil && cache.bridgeConfiguration != nil && cache.bridgeConfiguration.ipaddress != nil){
+        
+        // Check if we are connected to the bridge right now
+        if (UIAppDelegate.phHueSDK.localConnected) {
+            
+            // Show current time as last successful heartbeat time when we are connected to a bridge
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateStyle:NSDateFormatterNoStyle];
+            [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+
+        }
+    }
+}
+
+- (IBAction)selectOtherBridge:(id)sender{
+    [UIAppDelegate searchForBridgeLocal];
+}
+
+- (void)findNewBridgeButtonAction{
+    [UIAppDelegate searchForBridgeLocal];
 }
 
 #pragma mark - start stop speech recognizer action
 
 - (IBAction)startSpeechRecognizerButtonPressed:(UIButton *)sender {
-    
+    [[OEPocketsphinxController sharedInstance] setActive:TRUE error:nil];
     [self.fliteController say:@"Choose your lamp" withVoice:self.slt];
     
     if(![OEPocketsphinxController sharedInstance].isListening) {
@@ -180,6 +188,7 @@
         if(error)NSLog(@"Error stopping listening in stopButtonAction: %@", error);
     }
     self.startButton.hidden = FALSE;
+    self.wordsRecognizerTextField.text = @"";
 }
 
 
@@ -189,33 +198,19 @@
 - (void)pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
     NSLog(@"the received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
     
-    if([hypothesis isEqualToString:@"change model"]) { // If the user says "change model", we will switch to the alternate model (which happens to be the dynamically generated model).
-        
-        // Here is an example of language model switching in OpenEars. Deciding on what logical basis to switch models is your responsibility.
-        // For instance, when you call a customer service line and get a response tree that takes you through different options depending on what you say to it,
-        // the models are being switched as you progress through it so that only relevant choices can be understood. The construction of that logical branching and
-        // how to react to it is your job; OpenEars just lets you send the signal to switch the language model when you've decided it's the right time to do so.
-        
-        if(self.usingStartingLanguageModel) { // If we're on the starting model, switch to the dynamically generated one.
-            
-            [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:self.pathToSecondDynamicallyGeneratedLanguageModel withDictionary:self.pathToSecondDynamicallyGeneratedDictionary];
-            self.usingStartingLanguageModel = FALSE;
-            
-        } else { // If we're on the dynamically generated model, switch to the start model (this is an example of a trigger and method for switching models).
-            
-            [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:self.pathToFirstDynamicallyGeneratedLanguageModel withDictionary:self.pathToFirstDynamicallyGeneratedDictionary];
-            self.usingStartingLanguageModel = TRUE;
-        }
-    }
     
     self.wordsRecognizerTextField.text = [NSString stringWithFormat:@"Heard: \"%@\"", hypothesis]; // Show it in the status box.
-    [self randomizeColoursOfConnectLights];
+    [self randomizeColoursOfConnectLights:hypothesis];
     
     // This is how to use an available instance of OEFliteController. We're going to repeat back the command that we heard with the voice we've chosen.
     [self.fliteController say:[NSString stringWithFormat:@"You said %@",hypothesis] withVoice:self.slt];
-
-    
 }
+
+#ifdef kGetNbest
+- (void) pocketsphinxDidReceiveNBestHypothesisArray:(NSArray *)hypothesisArray { // Pocketsphinx has an n-best hypothesis dictionary.
+    NSLog(@"Local callback:  hypothesisArray is %@",hypothesisArray);
+}
+#endif
 
 - (void)pocketsphinxDidStartListening {
     NSLog(@" Pocketsphinix is now listening");
@@ -332,27 +327,33 @@
 
 #pragma mark - randomizing colors
 
-- (void)randomizeColoursOfConnectLights {
+- (void)randomizeColoursOfConnectLights:(NSString *)hypothesis {
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
     PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
     
-    for (PHLight *light in cache.lights.allValues) {
-        
-        PHLightState *lightState = [[PHLightState alloc] init];
-        
-        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
-        [lightState setBrightness:[NSNumber numberWithInt:254]];
-        [lightState setSaturation:[NSNumber numberWithInt:254]];
-        
-        // Send lightstate to light
-        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
-            if (errors != nil) {
-                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
-                
-                NSLog(@"Response: %@",message);
-            }
-        }];
+    PHLight *light = [cache.lights objectForKey:hypothesis];
+    
+    PHLightState *lightState = [[PHLightState alloc] init];
+    
+    [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
+    [lightState setBrightness:[NSNumber numberWithInt:254]];
+    [lightState setSaturation:[NSNumber numberWithInt:254]];
+    
+    // Send lightstate to light
+    [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
+        if (errors != nil) {
+            NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+            
+            NSLog(@"Response: %@",message);
+        }
+    }];
+}
+
+- (void) stopDisplayingLevels { // Stop displaying the levels by stopping the timer if it's running.
+    if(self.uiUpdateTimer && [self.uiUpdateTimer isValid]) { // If there is a running timer, we'll stop it here.
+        [self.uiUpdateTimer invalidate];
+        self.uiUpdateTimer = nil;
     }
 }
 

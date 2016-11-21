@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,58 +21,72 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button and start talking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-33-ufT">
-                    <rect key="frame" x="30" y="119" width="316" height="66"/>
-                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control lamp by saying lamp number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-33-ufT">
+                    <rect key="frame" x="30" y="119" width="316" height="60.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UU5-k2-9nF">
-                    <rect key="frame" x="16" y="236" width="343" height="68"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hue_ring.png" translatesAutoresizingMaskIntoConstraints="NO" id="DDY-NP-SdH">
+                    <rect key="frame" x="108" y="200.5" width="160" height="162"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="68" id="xYs-Fc-V6s"/>
+                        <constraint firstAttribute="width" constant="160" id="TcX-o9-5TU"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdr-Hy-UOc" userLabel="stopButton">
-                    <rect key="frame" x="235" y="399" width="124" height="30"/>
+                    <rect key="frame" x="223" y="393.5" width="136" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="124" id="LD8-Yo-ruX"/>
-                        <constraint firstAttribute="height" constant="30" id="wSW-fp-6xh"/>
+                        <constraint firstAttribute="width" constant="136" id="I1V-HK-fhx"/>
+                        <constraint firstAttribute="height" constant="30" id="g89-O9-L0X"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Stop Recording"/>
                     <connections>
                         <action selector="stopSpeechRecognizerButtonPressed:" destination="-1" eventType="touchUpInside" id="PcS-LP-uDr"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqf-cj-McR" userLabel="startButton">
-                    <rect key="frame" x="16" y="399" width="108" height="30"/>
+                    <rect key="frame" x="16" y="394.5" width="122" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="108" id="35B-Mo-T9w"/>
-                        <constraint firstAttribute="height" constant="30" id="hZH-or-TVk"/>
+                        <constraint firstAttribute="height" constant="30" id="aly-it-EST"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Start Recording"/>
                     <connections>
                         <action selector="startSpeechRecognizerButtonPressed:" destination="-1" eventType="touchUpInside" id="trZ-th-6eW"/>
                     </connections>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UU5-k2-9nF">
+                    <rect key="frame" x="135" y="260.5" width="106" height="55"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="QDr-cA-YPw"/>
+                        <constraint firstAttribute="width" constant="106" id="jOS-v4-hwA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="u9K-33-ufT" secondAttribute="trailing" constant="29" id="1IP-kr-bdg"/>
-                <constraint firstItem="lqf-cj-McR" firstAttribute="leading" secondItem="5cM-pH-O2t" secondAttribute="leading" constant="16" id="1Xe-qg-twR"/>
-                <constraint firstItem="UU5-k2-9nF" firstAttribute="leading" secondItem="5cM-pH-O2t" secondAttribute="leading" constant="16" id="6ZN-WW-49Y"/>
-                <constraint firstAttribute="trailing" secondItem="UU5-k2-9nF" secondAttribute="trailing" constant="16" id="KjP-h6-tx2"/>
-                <constraint firstItem="UU5-k2-9nF" firstAttribute="top" secondItem="u9K-33-ufT" secondAttribute="bottom" constant="51" id="XT4-5a-Chz"/>
-                <constraint firstItem="gdr-Hy-UOc" firstAttribute="top" secondItem="UU5-k2-9nF" secondAttribute="bottom" constant="95" id="eAZ-Yn-qAP"/>
-                <constraint firstItem="u9K-33-ufT" firstAttribute="leading" secondItem="5cM-pH-O2t" secondAttribute="leading" constant="30" id="eEG-JZ-Kg8"/>
-                <constraint firstAttribute="trailing" secondItem="gdr-Hy-UOc" secondAttribute="trailing" constant="16" id="pBM-qZ-M7W"/>
-                <constraint firstItem="lqf-cj-McR" firstAttribute="top" secondItem="UU5-k2-9nF" secondAttribute="bottom" constant="95" id="sdM-2x-yk6"/>
-                <constraint firstItem="u9K-33-ufT" firstAttribute="top" secondItem="5cM-pH-O2t" secondAttribute="top" constant="119" id="ws6-Hi-8BZ"/>
+                <constraint firstItem="u9K-33-ufT" firstAttribute="centerX" secondItem="5cM-pH-O2t" secondAttribute="centerX" id="E4c-Nd-w7L"/>
+                <constraint firstAttribute="trailing" secondItem="gdr-Hy-UOc" secondAttribute="trailing" constant="16" id="Isf-RU-LWd"/>
+                <constraint firstItem="lqf-cj-McR" firstAttribute="leading" secondItem="5cM-pH-O2t" secondAttribute="leading" constant="16" id="PUb-Qi-lXn"/>
+                <constraint firstItem="gdr-Hy-UOc" firstAttribute="top" secondItem="UU5-k2-9nF" secondAttribute="bottom" constant="78" id="PmQ-tS-pi5"/>
+                <constraint firstItem="UU5-k2-9nF" firstAttribute="top" secondItem="u9K-33-ufT" secondAttribute="bottom" constant="81" id="ReO-Lr-vXD"/>
+                <constraint firstItem="UU5-k2-9nF" firstAttribute="centerX" secondItem="DDY-NP-SdH" secondAttribute="centerX" id="T8E-Lu-oKx"/>
+                <constraint firstItem="UU5-k2-9nF" firstAttribute="centerX" secondItem="u9K-33-ufT" secondAttribute="centerX" id="WCO-7L-WbD"/>
+                <constraint firstItem="u9K-33-ufT" firstAttribute="top" secondItem="5cM-pH-O2t" secondAttribute="top" constant="119" id="aMb-fM-5EO"/>
+                <constraint firstItem="gdr-Hy-UOc" firstAttribute="top" secondItem="DDY-NP-SdH" secondAttribute="bottom" constant="31" id="bhS-LG-AQb"/>
+                <constraint firstItem="lqf-cj-McR" firstAttribute="top" secondItem="DDY-NP-SdH" secondAttribute="bottom" constant="32" id="oX7-Tv-2zB"/>
+                <constraint firstItem="DDY-NP-SdH" firstAttribute="top" secondItem="u9K-33-ufT" secondAttribute="bottom" constant="21" id="plI-qU-OKZ"/>
+                <constraint firstItem="u9K-33-ufT" firstAttribute="leading" secondItem="5cM-pH-O2t" secondAttribute="leading" constant="30" id="tgK-Xg-RG3"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="60.5" y="34.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="hue_ring.png" width="241" height="241"/>
+    </resources>
 </document>

@@ -16,6 +16,10 @@
 		44A7BC4F1DDCF6BE006C8C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC4D1DDCF6BE006C8C1E /* LaunchScreen.storyboard */; };
 		44A7BC631DDCFF08006C8C1E /* LightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A7BC621DDCFF07006C8C1E /* LightsViewController.m */; };
 		44A7BC651DDCFFE6006C8C1E /* LightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */; };
+		44E8796C1DE229DB00A14C57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E8796B1DE229DA00A14C57 /* QuartzCore.framework */; };
+		44E8796F1DE22EEC00A14C57 /* Waver.h in Sources */ = {isa = PBXBuildFile; fileRef = 44E8796D1DE22EEC00A14C57 /* Waver.h */; };
+		44E879701DE22EEC00A14C57 /* Waver.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E8796E1DE22EEC00A14C57 /* Waver.m */; };
+		44E879731DE29A9700A14C57 /* hue_ring@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44E879721DE29A9700A14C57 /* hue_ring@2x.png */; };
 		44EA9E5E1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */; };
 		44EA9E5F1DDFB5B0003AAE0A /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */; };
 		44EA9E601DDFB5B0003AAE0A /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */; };
@@ -64,6 +68,10 @@
 		44A7BC611DDCFF07006C8C1E /* LightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightsViewController.h; sourceTree = "<group>"; };
 		44A7BC621DDCFF07006C8C1E /* LightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightsViewController.m; sourceTree = "<group>"; };
 		44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightsViewController.xib; sourceTree = "<group>"; };
+		44E8796B1DE229DA00A14C57 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		44E8796D1DE22EEC00A14C57 /* Waver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Waver.h; sourceTree = "<group>"; };
+		44E8796E1DE22EEC00A14C57 /* Waver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Waver.m; sourceTree = "<group>"; };
+		44E879721DE29A9700A14C57 /* hue_ring@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hue_ring@2x.png"; sourceTree = "<group>"; };
 		44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
 		44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
 		44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E8796C1DE229DB00A14C57 /* QuartzCore.framework in Frameworks */,
 				44EA9E7C1DDFB9E2003AAE0A /* HueSDK_iOS.framework in Frameworks */,
 				44EA9E7B1DDFB9CE003AAE0A /* Foundation.framework in Frameworks */,
 				44EA9E791DDFB997003AAE0A /* UIKit.framework in Frameworks */,
@@ -123,8 +132,9 @@
 		44A7BC301DDCF6BE006C8C1E = {
 			isa = PBXGroup;
 			children = (
-				44E8796A1DE20B2B00A14C57 /* Lamberjack */,
 				44A7BC3B1DDCF6BE006C8C1E /* LightYourWords */,
+				44E879711DE22EFD00A14C57 /* Waver */,
+				44E8796A1DE20B2B00A14C57 /* Lamberjack */,
 				44A7BC3A1DDCF6BE006C8C1E /* Products */,
 				44EA9E311DDFB351003AAE0A /* Frameworks */,
 			);
@@ -198,9 +208,19 @@
 			name = Lamberjack;
 			sourceTree = "<group>";
 		};
+		44E879711DE22EFD00A14C57 /* Waver */ = {
+			isa = PBXGroup;
+			children = (
+				44E8796D1DE22EEC00A14C57 /* Waver.h */,
+				44E8796E1DE22EEC00A14C57 /* Waver.m */,
+			);
+			name = Waver;
+			sourceTree = "<group>";
+		};
 		44EA9E311DDFB351003AAE0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44E8796B1DE229DA00A14C57 /* QuartzCore.framework */,
 				44EA9E7A1DDFB9CE003AAE0A /* Foundation.framework */,
 				44EA9E781DDFB997003AAE0A /* UIKit.framework */,
 				44EA9E761DDFB97D003AAE0A /* CoreGraphics.framework */,
@@ -217,6 +237,7 @@
 		44EA9E831DDFE90D003AAE0A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				44E879721DE29A9700A14C57 /* hue_ring@2x.png */,
 				44EA9E7D1DDFE8A0003AAE0A /* press_smartbridge.png */,
 				44EA9E7E1DDFE8A0003AAE0A /* press_smartbridge@2x.png */,
 			);
@@ -290,6 +311,7 @@
 				44A7BC651DDCFFE6006C8C1E /* LightsViewController.xib in Resources */,
 				44EA9E5E1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle in Resources */,
 				44EA9E821DDFE8D4003AAE0A /* LoadingViewController.xib in Resources */,
+				44E879731DE29A9700A14C57 /* hue_ring@2x.png in Resources */,
 				44EA9E8D1DDFF718003AAE0A /* BridgePushLinkViewController.xib in Resources */,
 				44EA9E881DDFF087003AAE0A /* BridgeSelectionViewController.xib in Resources */,
 			);
@@ -302,6 +324,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E8796F1DE22EEC00A14C57 /* Waver.h in Sources */,
+				44E879701DE22EEC00A14C57 /* Waver.m in Sources */,
 				44EA9EBD1DE01462003AAE0A /* ContextFilterLogFormatter.h in Sources */,
 				44EA9EBE1DE01462003AAE0A /* ContextFilterLogFormatter.m in Sources */,
 				44EA9EBF1DE01462003AAE0A /* DDAbstractDatabaseLogger.h in Sources */,
@@ -454,7 +478,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yevhenkim.LightYourWords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -474,7 +501,10 @@
 				INFOPLIST_FILE = LightYourWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yevhenkim.LightYourWords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
