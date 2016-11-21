@@ -20,6 +20,7 @@
 		44E8796F1DE22EEC00A14C57 /* Waver.h in Sources */ = {isa = PBXBuildFile; fileRef = 44E8796D1DE22EEC00A14C57 /* Waver.h */; };
 		44E879701DE22EEC00A14C57 /* Waver.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E8796E1DE22EEC00A14C57 /* Waver.m */; };
 		44E879731DE29A9700A14C57 /* hue_ring@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44E879721DE29A9700A14C57 /* hue_ring@2x.png */; };
+		44E879751DE2A61300A14C57 /* Hue_alpha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44E879741DE2A61300A14C57 /* Hue_alpha@2x.png */; };
 		44EA9E5E1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */; };
 		44EA9E5F1DDFB5B0003AAE0A /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */; };
 		44EA9E601DDFB5B0003AAE0A /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */; };
@@ -72,6 +73,7 @@
 		44E8796D1DE22EEC00A14C57 /* Waver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Waver.h; sourceTree = "<group>"; };
 		44E8796E1DE22EEC00A14C57 /* Waver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Waver.m; sourceTree = "<group>"; };
 		44E879721DE29A9700A14C57 /* hue_ring@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hue_ring@2x.png"; sourceTree = "<group>"; };
+		44E879741DE2A61300A14C57 /* Hue_alpha@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hue_alpha@2x.png"; sourceTree = "<group>"; };
 		44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
 		44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
 		44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		44EA9E831DDFE90D003AAE0A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				44E879741DE2A61300A14C57 /* Hue_alpha@2x.png */,
 				44E879721DE29A9700A14C57 /* hue_ring@2x.png */,
 				44EA9E7D1DDFE8A0003AAE0A /* press_smartbridge.png */,
 				44EA9E7E1DDFE8A0003AAE0A /* press_smartbridge@2x.png */,
@@ -306,6 +309,7 @@
 				44EA9E7F1DDFE8A0003AAE0A /* press_smartbridge.png in Resources */,
 				44A7BC4F1DDCF6BE006C8C1E /* LaunchScreen.storyboard in Resources */,
 				44A7BC4C1DDCF6BE006C8C1E /* Assets.xcassets in Resources */,
+				44E879751DE2A61300A14C57 /* Hue_alpha@2x.png in Resources */,
 				44EA9E801DDFE8A0003AAE0A /* press_smartbridge@2x.png in Resources */,
 				44A7BC471DDCF6BE006C8C1E /* Main.storyboard in Resources */,
 				44A7BC651DDCFFE6006C8C1E /* LightsViewController.xib in Resources */,

@@ -48,7 +48,7 @@ typedef void (^PHNSURLSessionDataTaskCompletionHandler)(NSData *data, NSURLRespo
 
 /**
  Initializes the http requester with a given timeout interval set (overrides default timeout of 8 seconds)
- @param completionHandler block called when done
+ @param timeOutInterval block called when done
  @see PHHttpRequesterCompletionHandler
  */
 - (id)initWithTimeoutInterval:(NSInteger)timeOutInterval;

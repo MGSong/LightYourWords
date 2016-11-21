@@ -39,7 +39,7 @@ typedef enum {
 
 /**
  Set the button event with a enumeration value
- @param eventCode The enumeration value
+ @param buttonEvent The enumeration value
  */
 - (void)setButtonEventWithEnum:(PHSwitchStateButtonEventCode)buttonEvent;
 

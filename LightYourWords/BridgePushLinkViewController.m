@@ -55,6 +55,10 @@
     [self.phHueSDK startPushlinkAuthentication];
 }
 
+- (void)authenticationSuccess {
+    
+}
+
 /**
  Notification receiver which is called when the pushlinking failed because the time limit was reached
  */

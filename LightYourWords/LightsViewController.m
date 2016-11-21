@@ -77,64 +77,6 @@
     [OEPocketsphinxController sharedInstance].verbosePocketSphinx = TRUE;
     [self.openEarsEventsObserver setDelegate:self];
     [[OEPocketsphinxController sharedInstance] setActive:FALSE error:nil];
-    
-    
-    OELanguageModelGenerator *languageModelGenerator = [[OELanguageModelGenerator alloc]init];
-    
-    NSArray *lamps = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10"];
-    NSError *error = [languageModelGenerator generateLanguageModelFromArray:lamps withFilesNamed:@"FirstOpenEarsDynamicLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]];
-    
-    if(error) {
-        NSLog(@"Dynamic language generator reported error %@", [error description]);
-    } else {
-        self.pathToFirstDynamicallyGeneratedLanguageModel = [languageModelGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"FirstOpenEarsDynamicLanguageModel"];
-        self.pathToFirstDynamicallyGeneratedDictionary = [languageModelGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"FirstOpenEarsDynamicLanguageModel"];
-    }
-    
-    self.usingStartingLanguageModel = TRUE; // This is not an OpenEars thing, this is just so I can switch back and forth between the two models in this sample app.
-    
-    NSArray *commands = @[@"random"];
-    error = [languageModelGenerator generateLanguageModelFromArray:commands withFilesNamed:@"SecondOpenEarsDynamicLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]];
-    
-    if(error) {
-        NSLog(@"Dynamic language generator reported error %@", [error description]);
-    }	else {
-        
-        self.pathToSecondDynamicallyGeneratedLanguageModel = [languageModelGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"SecondOpenEarsDynamicLanguageModel"]; // We'll set our new .languagemodel file to be the one to get switched to when the words "CHANGE MODEL" are recognized.
-        self.pathToSecondDynamicallyGeneratedDictionary = [languageModelGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"SecondOpenEarsDynamicLanguageModel"];; // We'll set our new dictionary to be the one to get switched to when the words "CHANGE MODEL" are recognized.
-        
-        // Next, an informative message.
-        
-        NSLog(@"\n\nWelcome to the OpenEars sample project. This project understands the words:\n%@,\nand if you say \"change model\" (assuming you haven't altered that trigger phrase in this sample app) it will switch to its dynamically-generated model which understands the words:\n%@", lamps, commands);
-        
-        // This is how to start the continuous listening loop of an available instance of OEPocketsphinxController. We won't do this if the language generation failed since it will be listening for a command to change over to the generated language.
-        
-        [[OEPocketsphinxController sharedInstance] setActive:TRUE error:nil]; // Call this once before setting properties of the OEPocketsphinxController instance.
-        
-        //   [OEPocketsphinxController sharedInstance].pathToTestFile = [[NSBundle mainBundle] pathForResource:@"change_model_short" ofType:@"wav"];  // This is how you could use a test WAV (mono/16-bit/16k) rather than live recognition. Don't forget to add your WAV to your app bundle.
-        
-        if(![OEPocketsphinxController sharedInstance].isListening) {
-            [[OEPocketsphinxController sharedInstance] startListeningWithLanguageModelAtPath:self.pathToFirstDynamicallyGeneratedLanguageModel dictionaryAtPath:self.pathToFirstDynamicallyGeneratedDictionary acousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"] languageModelIsJSGF:FALSE]; // Start speech recognition if we aren't already listening.
-        }
-        // [self startDisplayingLevels] is not an OpenEars method, just a very simple approach for level reading
-        // that I've included with this sample app. My example implementation does make use of two OpenEars
-        // methods:	the pocketsphinxInputLevel method of OEPocketsphinxController and the fliteOutputLevel
-        // method of fliteController.
-        //
-        // The example is meant to show one way that you can read those levels continuously without locking the UI,
-        // by using an NSTimer, but the OpenEars level-reading methods
-        // themselves do not include multithreading code since I believe that you will want to design your own
-        // code approaches for level display that are tightly-integrated with your interaction design and the
-        // graphics API you choose.
-        
-    }
-    
-    self.startButton.hidden = FALSE;
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    
 }
 
 - (void)localConnection{
@@ -156,6 +98,58 @@
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
             [dateFormatter setDateStyle:NSDateFormatterNoStyle];
             [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+            
+            OELanguageModelGenerator *languageModelGenerator = [[OELanguageModelGenerator alloc]init];
+            
+            NSArray *lamps = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10"];
+            NSError *error = [languageModelGenerator generateLanguageModelFromArray:lamps withFilesNamed:@"FirstOpenEarsDynamicLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]];
+            
+            if(error) {
+                NSLog(@"Dynamic language generator reported error %@", [error description]);
+            } else {
+                self.pathToFirstDynamicallyGeneratedLanguageModel = [languageModelGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"FirstOpenEarsDynamicLanguageModel"];
+                self.pathToFirstDynamicallyGeneratedDictionary = [languageModelGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"FirstOpenEarsDynamicLanguageModel"];
+            }
+            
+            self.usingStartingLanguageModel = TRUE; // This is not an OpenEars thing, this is just so I can switch back and forth between the two models in this sample app.
+            
+            NSArray *commands = @[@"random"];
+            error = [languageModelGenerator generateLanguageModelFromArray:commands withFilesNamed:@"SecondOpenEarsDynamicLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]];
+            
+            if(error) {
+                NSLog(@"Dynamic language generator reported error %@", [error description]);
+            }	else {
+                
+                self.pathToSecondDynamicallyGeneratedLanguageModel = [languageModelGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"SecondOpenEarsDynamicLanguageModel"]; // We'll set our new .languagemodel file to be the one to get switched to when the words "CHANGE MODEL" are recognized.
+                self.pathToSecondDynamicallyGeneratedDictionary = [languageModelGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"SecondOpenEarsDynamicLanguageModel"];; // We'll set our new dictionary to be the one to get switched to when the words "CHANGE MODEL" are recognized.
+                
+                // Next, an informative message.
+                
+                NSLog(@"\n\nWelcome to the OpenEars sample project. This project understands the words:\n%@,\nand if you say \"change model\" (assuming you haven't altered that trigger phrase in this sample app) it will switch to its dynamically-generated model which understands the words:\n%@", lamps, commands);
+                
+                // This is how to start the continuous listening loop of an available instance of OEPocketsphinxController. We won't do this if the language generation failed since it will be listening for a command to change over to the generated language.
+                
+                [[OEPocketsphinxController sharedInstance] setActive:TRUE error:nil]; // Call this once before setting properties of the OEPocketsphinxController instance.
+                
+                //   [OEPocketsphinxController sharedInstance].pathToTestFile = [[NSBundle mainBundle] pathForResource:@"change_model_short" ofType:@"wav"];  // This is how you could use a test WAV (mono/16-bit/16k) rather than live recognition. Don't forget to add your WAV to your app bundle.
+                
+                if(![OEPocketsphinxController sharedInstance].isListening) {
+                    [[OEPocketsphinxController sharedInstance] startListeningWithLanguageModelAtPath:self.pathToFirstDynamicallyGeneratedLanguageModel dictionaryAtPath:self.pathToFirstDynamicallyGeneratedDictionary acousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"] languageModelIsJSGF:FALSE]; // Start speech recognition if we aren't already listening.
+                }
+                // [self startDisplayingLevels] is not an OpenEars method, just a very simple approach for level reading
+                // that I've included with this sample app. My example implementation does make use of two OpenEars
+                // methods:	the pocketsphinxInputLevel method of OEPocketsphinxController and the fliteOutputLevel
+                // method of fliteController.
+                //
+                // The example is meant to show one way that you can read those levels continuously without locking the UI,
+                // by using an NSTimer, but the OpenEars level-reading methods
+                // themselves do not include multithreading code since I believe that you will want to design your own
+                // code approaches for level display that are tightly-integrated with your interaction design and the
+                // graphics API you choose.
+                
+            }
+            
+            self.startButton.hidden = FALSE;
 
         }
     }
