@@ -17,19 +17,26 @@
 		44A7BC631DDCFF08006C8C1E /* LightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A7BC621DDCFF07006C8C1E /* LightsViewController.m */; };
 		44A7BC651DDCFFE6006C8C1E /* LightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */; };
 		44E8796C1DE229DB00A14C57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E8796B1DE229DA00A14C57 /* QuartzCore.framework */; };
-		44E8796F1DE22EEC00A14C57 /* Waver.h in Sources */ = {isa = PBXBuildFile; fileRef = 44E8796D1DE22EEC00A14C57 /* Waver.h */; };
-		44E879701DE22EEC00A14C57 /* Waver.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E8796E1DE22EEC00A14C57 /* Waver.m */; };
 		44E879731DE29A9700A14C57 /* hue_ring@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44E879721DE29A9700A14C57 /* hue_ring@2x.png */; };
 		44E879751DE2A61300A14C57 /* Hue_alpha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44E879741DE2A61300A14C57 /* Hue_alpha@2x.png */; };
-		44EA9E5E1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */; };
-		44EA9E5F1DDFB5B0003AAE0A /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */; };
-		44EA9E601DDFB5B0003AAE0A /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */; };
+		44E8797B1DE33E3800A14C57 /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E879771DE33E3800A14C57 /* HueSDK_iOS.framework */; };
+		44E8798C1DE33E8800A14C57 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E8797F1DE33E8800A14C57 /* ContextFilterLogFormatter.m */; };
+		44E8798D1DE33E8800A14C57 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E879811DE33E8800A14C57 /* DDAbstractDatabaseLogger.m */; };
+		44E8798E1DE33E8800A14C57 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E879831DE33E8800A14C57 /* DDASLLogger.m */; };
+		44E8798F1DE33E8800A14C57 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E879851DE33E8800A14C57 /* DDFileLogger.m */; };
+		44E879901DE33E8800A14C57 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E879871DE33E8800A14C57 /* DDLog.m */; };
+		44E879911DE33E8800A14C57 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E879891DE33E8800A14C57 /* DDTTYLogger.m */; };
+		44E879921DE33E8800A14C57 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E8798B1DE33E8800A14C57 /* DispatchQueueLogFormatter.m */; };
+		44E879951DE33EA700A14C57 /* Waver.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E879941DE33EA700A14C57 /* Waver.m */; };
+		44E879991DE3495A00A14C57 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44E879961DE3495A00A14C57 /* AcousticModelEnglish.bundle */; };
+		44E8799A1DE3495A00A14C57 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E879971DE3495A00A14C57 /* OpenEars.framework */; };
+		44E8799B1DE3495A00A14C57 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E879981DE3495A00A14C57 /* Slt.framework */; };
+		44E8799C1DE3497C00A14C57 /* AcousticModelEnglish.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E879961DE3495A00A14C57 /* AcousticModelEnglish.bundle */; };
 		44EA9E621DDFB5D5003AAE0A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E611DDFB5D5003AAE0A /* AVFoundation.framework */; };
 		44EA9E641DDFB5E0003AAE0A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E631DDFB5E0003AAE0A /* AudioToolbox.framework */; };
 		44EA9E771DDFB97D003AAE0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E761DDFB97D003AAE0A /* CoreGraphics.framework */; };
 		44EA9E791DDFB997003AAE0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E781DDFB997003AAE0A /* UIKit.framework */; };
 		44EA9E7B1DDFB9CE003AAE0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E7A1DDFB9CE003AAE0A /* Foundation.framework */; };
-		44EA9E7C1DDFB9E2003AAE0A /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA9E651DDFB95D003AAE0A /* HueSDK_iOS.framework */; };
 		44EA9E7F1DDFE8A0003AAE0A /* press_smartbridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E7D1DDFE8A0003AAE0A /* press_smartbridge.png */; };
 		44EA9E801DDFE8A0003AAE0A /* press_smartbridge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E7E1DDFE8A0003AAE0A /* press_smartbridge@2x.png */; };
 		44EA9E821DDFE8D4003AAE0A /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E811DDFE8D4003AAE0A /* LoadingViewController.xib */; };
@@ -38,20 +45,6 @@
 		44EA9E8B1DDFF181003AAE0A /* BridgeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9E8A1DDFF181003AAE0A /* BridgeSelectionViewController.m */; };
 		44EA9E8D1DDFF718003AAE0A /* BridgePushLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44EA9E8C1DDFF718003AAE0A /* BridgePushLinkViewController.xib */; };
 		44EA9E901DDFF82B003AAE0A /* BridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9E8F1DDFF82B003AAE0A /* BridgePushLinkViewController.m */; };
-		44EA9EBD1DE01462003AAE0A /* ContextFilterLogFormatter.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EAF1DE01462003AAE0A /* ContextFilterLogFormatter.h */; };
-		44EA9EBE1DE01462003AAE0A /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB01DE01462003AAE0A /* ContextFilterLogFormatter.m */; };
-		44EA9EBF1DE01462003AAE0A /* DDAbstractDatabaseLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB11DE01462003AAE0A /* DDAbstractDatabaseLogger.h */; };
-		44EA9EC01DE01462003AAE0A /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB21DE01462003AAE0A /* DDAbstractDatabaseLogger.m */; };
-		44EA9EC11DE01462003AAE0A /* DDASLLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB31DE01462003AAE0A /* DDASLLogger.h */; };
-		44EA9EC21DE01462003AAE0A /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB41DE01462003AAE0A /* DDASLLogger.m */; };
-		44EA9EC31DE01462003AAE0A /* DDFileLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB51DE01462003AAE0A /* DDFileLogger.h */; };
-		44EA9EC41DE01462003AAE0A /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB61DE01462003AAE0A /* DDFileLogger.m */; };
-		44EA9EC51DE01462003AAE0A /* DDLog.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB71DE01462003AAE0A /* DDLog.h */; };
-		44EA9EC61DE01462003AAE0A /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB81DE01462003AAE0A /* DDLog.m */; };
-		44EA9EC71DE01462003AAE0A /* DDTTYLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EB91DE01462003AAE0A /* DDTTYLogger.h */; };
-		44EA9EC81DE01462003AAE0A /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EBA1DE01462003AAE0A /* DDTTYLogger.m */; };
-		44EA9EC91DE01462003AAE0A /* DispatchQueueLogFormatter.h in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EBB1DE01462003AAE0A /* DispatchQueueLogFormatter.h */; };
-		44EA9ECA1DE01462003AAE0A /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA9EBC1DE01462003AAE0A /* DispatchQueueLogFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,16 +63,30 @@
 		44A7BC621DDCFF07006C8C1E /* LightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightsViewController.m; sourceTree = "<group>"; };
 		44A7BC641DDCFFE6006C8C1E /* LightsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightsViewController.xib; sourceTree = "<group>"; };
 		44E8796B1DE229DA00A14C57 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		44E8796D1DE22EEC00A14C57 /* Waver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Waver.h; sourceTree = "<group>"; };
-		44E8796E1DE22EEC00A14C57 /* Waver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Waver.m; sourceTree = "<group>"; };
 		44E879721DE29A9700A14C57 /* hue_ring@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hue_ring@2x.png"; sourceTree = "<group>"; };
 		44E879741DE2A61300A14C57 /* Hue_alpha@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hue_alpha@2x.png"; sourceTree = "<group>"; };
-		44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
-		44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
-		44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		44E879771DE33E3800A14C57 /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HueSDK_iOS.framework; path = Frameworks/HueSDK_iOS.framework; sourceTree = "<group>"; };
+		44E8797E1DE33E8800A14C57 /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextFilterLogFormatter.h; path = Lamberjack/ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		44E8797F1DE33E8800A14C57 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextFilterLogFormatter.m; path = Lamberjack/ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		44E879801DE33E8800A14C57 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Lamberjack/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		44E879811DE33E8800A14C57 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Lamberjack/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		44E879821DE33E8800A14C57 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Lamberjack/DDASLLogger.h; sourceTree = "<group>"; };
+		44E879831DE33E8800A14C57 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Lamberjack/DDASLLogger.m; sourceTree = "<group>"; };
+		44E879841DE33E8800A14C57 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Lamberjack/DDFileLogger.h; sourceTree = "<group>"; };
+		44E879851DE33E8800A14C57 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Lamberjack/DDFileLogger.m; sourceTree = "<group>"; };
+		44E879861DE33E8800A14C57 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Lamberjack/DDLog.h; sourceTree = "<group>"; };
+		44E879871DE33E8800A14C57 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Lamberjack/DDLog.m; sourceTree = "<group>"; };
+		44E879881DE33E8800A14C57 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Lamberjack/DDTTYLogger.h; sourceTree = "<group>"; };
+		44E879891DE33E8800A14C57 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Lamberjack/DDTTYLogger.m; sourceTree = "<group>"; };
+		44E8798A1DE33E8800A14C57 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DispatchQueueLogFormatter.h; path = Lamberjack/DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		44E8798B1DE33E8800A14C57 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DispatchQueueLogFormatter.m; path = Lamberjack/DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		44E879931DE33EA700A14C57 /* Waver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Waver.h; path = Waver/Waver.h; sourceTree = "<group>"; };
+		44E879941DE33EA700A14C57 /* Waver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Waver.m; path = Waver/Waver.m; sourceTree = "<group>"; };
+		44E879961DE3495A00A14C57 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelEnglish.bundle; path = Frameworks/AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		44E879971DE3495A00A14C57 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEars.framework; path = Frameworks/OpenEars.framework; sourceTree = "<group>"; };
+		44E879981DE3495A00A14C57 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slt.framework; path = Frameworks/Slt.framework; sourceTree = "<group>"; };
 		44EA9E611DDFB5D5003AAE0A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		44EA9E631DDFB5E0003AAE0A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		44EA9E651DDFB95D003AAE0A /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HueSDK_iOS.framework; sourceTree = "<group>"; };
 		44EA9E761DDFB97D003AAE0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		44EA9E781DDFB997003AAE0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44EA9E7A1DDFB9CE003AAE0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,20 +102,6 @@
 		44EA9E8E1DDFF82B003AAE0A /* BridgePushLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgePushLinkViewController.h; sourceTree = "<group>"; };
 		44EA9E8F1DDFF82B003AAE0A /* BridgePushLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgePushLinkViewController.m; sourceTree = "<group>"; };
 		44EA9E911DE010E9003AAE0A /* HueQuickStartApp-iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HueQuickStartApp-iOS-Prefix.pch"; sourceTree = "<group>"; };
-		44EA9EAF1DE01462003AAE0A /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
-		44EA9EB01DE01462003AAE0A /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
-		44EA9EB11DE01462003AAE0A /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
-		44EA9EB21DE01462003AAE0A /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
-		44EA9EB31DE01462003AAE0A /* DDASLLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		44EA9EB41DE01462003AAE0A /* DDASLLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
-		44EA9EB51DE01462003AAE0A /* DDFileLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
-		44EA9EB61DE01462003AAE0A /* DDFileLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
-		44EA9EB71DE01462003AAE0A /* DDLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
-		44EA9EB81DE01462003AAE0A /* DDLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
-		44EA9EB91DE01462003AAE0A /* DDTTYLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
-		44EA9EBA1DE01462003AAE0A /* DDTTYLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
-		44EA9EBB1DE01462003AAE0A /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		44EA9EBC1DE01462003AAE0A /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,15 +109,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E8799C1DE3497C00A14C57 /* AcousticModelEnglish.bundle in Frameworks */,
+				44E8797B1DE33E3800A14C57 /* HueSDK_iOS.framework in Frameworks */,
 				44E8796C1DE229DB00A14C57 /* QuartzCore.framework in Frameworks */,
-				44EA9E7C1DDFB9E2003AAE0A /* HueSDK_iOS.framework in Frameworks */,
 				44EA9E7B1DDFB9CE003AAE0A /* Foundation.framework in Frameworks */,
+				44E8799B1DE3495A00A14C57 /* Slt.framework in Frameworks */,
+				44E8799A1DE3495A00A14C57 /* OpenEars.framework in Frameworks */,
 				44EA9E791DDFB997003AAE0A /* UIKit.framework in Frameworks */,
 				44EA9E771DDFB97D003AAE0A /* CoreGraphics.framework in Frameworks */,
 				44EA9E641DDFB5E0003AAE0A /* AudioToolbox.framework in Frameworks */,
 				44EA9E621DDFB5D5003AAE0A /* AVFoundation.framework in Frameworks */,
-				44EA9E601DDFB5B0003AAE0A /* Slt.framework in Frameworks */,
-				44EA9E5F1DDFB5B0003AAE0A /* OpenEars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,20 +186,20 @@
 		44E8796A1DE20B2B00A14C57 /* Lamberjack */ = {
 			isa = PBXGroup;
 			children = (
-				44EA9EAF1DE01462003AAE0A /* ContextFilterLogFormatter.h */,
-				44EA9EB01DE01462003AAE0A /* ContextFilterLogFormatter.m */,
-				44EA9EB11DE01462003AAE0A /* DDAbstractDatabaseLogger.h */,
-				44EA9EB21DE01462003AAE0A /* DDAbstractDatabaseLogger.m */,
-				44EA9EB31DE01462003AAE0A /* DDASLLogger.h */,
-				44EA9EB41DE01462003AAE0A /* DDASLLogger.m */,
-				44EA9EB51DE01462003AAE0A /* DDFileLogger.h */,
-				44EA9EB61DE01462003AAE0A /* DDFileLogger.m */,
-				44EA9EB71DE01462003AAE0A /* DDLog.h */,
-				44EA9EB81DE01462003AAE0A /* DDLog.m */,
-				44EA9EB91DE01462003AAE0A /* DDTTYLogger.h */,
-				44EA9EBA1DE01462003AAE0A /* DDTTYLogger.m */,
-				44EA9EBB1DE01462003AAE0A /* DispatchQueueLogFormatter.h */,
-				44EA9EBC1DE01462003AAE0A /* DispatchQueueLogFormatter.m */,
+				44E8797E1DE33E8800A14C57 /* ContextFilterLogFormatter.h */,
+				44E8797F1DE33E8800A14C57 /* ContextFilterLogFormatter.m */,
+				44E879801DE33E8800A14C57 /* DDAbstractDatabaseLogger.h */,
+				44E879811DE33E8800A14C57 /* DDAbstractDatabaseLogger.m */,
+				44E879821DE33E8800A14C57 /* DDASLLogger.h */,
+				44E879831DE33E8800A14C57 /* DDASLLogger.m */,
+				44E879841DE33E8800A14C57 /* DDFileLogger.h */,
+				44E879851DE33E8800A14C57 /* DDFileLogger.m */,
+				44E879861DE33E8800A14C57 /* DDLog.h */,
+				44E879871DE33E8800A14C57 /* DDLog.m */,
+				44E879881DE33E8800A14C57 /* DDTTYLogger.h */,
+				44E879891DE33E8800A14C57 /* DDTTYLogger.m */,
+				44E8798A1DE33E8800A14C57 /* DispatchQueueLogFormatter.h */,
+				44E8798B1DE33E8800A14C57 /* DispatchQueueLogFormatter.m */,
 			);
 			name = Lamberjack;
 			sourceTree = "<group>";
@@ -213,8 +207,8 @@
 		44E879711DE22EFD00A14C57 /* Waver */ = {
 			isa = PBXGroup;
 			children = (
-				44E8796D1DE22EEC00A14C57 /* Waver.h */,
-				44E8796E1DE22EEC00A14C57 /* Waver.m */,
+				44E879931DE33EA700A14C57 /* Waver.h */,
+				44E879941DE33EA700A14C57 /* Waver.m */,
 			);
 			name = Waver;
 			sourceTree = "<group>";
@@ -222,16 +216,16 @@
 		44EA9E311DDFB351003AAE0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44E879961DE3495A00A14C57 /* AcousticModelEnglish.bundle */,
+				44E879971DE3495A00A14C57 /* OpenEars.framework */,
+				44E879981DE3495A00A14C57 /* Slt.framework */,
+				44E879771DE33E3800A14C57 /* HueSDK_iOS.framework */,
 				44E8796B1DE229DA00A14C57 /* QuartzCore.framework */,
 				44EA9E7A1DDFB9CE003AAE0A /* Foundation.framework */,
 				44EA9E781DDFB997003AAE0A /* UIKit.framework */,
 				44EA9E761DDFB97D003AAE0A /* CoreGraphics.framework */,
-				44EA9E651DDFB95D003AAE0A /* HueSDK_iOS.framework */,
 				44EA9E631DDFB5E0003AAE0A /* AudioToolbox.framework */,
 				44EA9E611DDFB5D5003AAE0A /* AVFoundation.framework */,
-				44EA9E5B1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle */,
-				44EA9E5C1DDFB5B0003AAE0A /* OpenEars.framework */,
-				44EA9E5D1DDFB5B0003AAE0A /* Slt.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -313,9 +307,9 @@
 				44EA9E801DDFE8A0003AAE0A /* press_smartbridge@2x.png in Resources */,
 				44A7BC471DDCF6BE006C8C1E /* Main.storyboard in Resources */,
 				44A7BC651DDCFFE6006C8C1E /* LightsViewController.xib in Resources */,
-				44EA9E5E1DDFB5B0003AAE0A /* AcousticModelEnglish.bundle in Resources */,
 				44EA9E821DDFE8D4003AAE0A /* LoadingViewController.xib in Resources */,
 				44E879731DE29A9700A14C57 /* hue_ring@2x.png in Resources */,
+				44E879991DE3495A00A14C57 /* AcousticModelEnglish.bundle in Resources */,
 				44EA9E8D1DDFF718003AAE0A /* BridgePushLinkViewController.xib in Resources */,
 				44EA9E881DDFF087003AAE0A /* BridgeSelectionViewController.xib in Resources */,
 			);
@@ -328,30 +322,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E8796F1DE22EEC00A14C57 /* Waver.h in Sources */,
-				44E879701DE22EEC00A14C57 /* Waver.m in Sources */,
-				44EA9EBD1DE01462003AAE0A /* ContextFilterLogFormatter.h in Sources */,
-				44EA9EBE1DE01462003AAE0A /* ContextFilterLogFormatter.m in Sources */,
-				44EA9EBF1DE01462003AAE0A /* DDAbstractDatabaseLogger.h in Sources */,
-				44EA9EC01DE01462003AAE0A /* DDAbstractDatabaseLogger.m in Sources */,
-				44EA9EC11DE01462003AAE0A /* DDASLLogger.h in Sources */,
-				44EA9EC21DE01462003AAE0A /* DDASLLogger.m in Sources */,
-				44EA9EC31DE01462003AAE0A /* DDFileLogger.h in Sources */,
-				44EA9EC41DE01462003AAE0A /* DDFileLogger.m in Sources */,
-				44EA9EC51DE01462003AAE0A /* DDLog.h in Sources */,
-				44EA9EC61DE01462003AAE0A /* DDLog.m in Sources */,
-				44EA9EC71DE01462003AAE0A /* DDTTYLogger.h in Sources */,
-				44EA9EC81DE01462003AAE0A /* DDTTYLogger.m in Sources */,
-				44EA9EC91DE01462003AAE0A /* DispatchQueueLogFormatter.h in Sources */,
-				44EA9ECA1DE01462003AAE0A /* DispatchQueueLogFormatter.m in Sources */,
 				44A7BC441DDCF6BE006C8C1E /* ViewController.m in Sources */,
+				44E8798F1DE33E8800A14C57 /* DDFileLogger.m in Sources */,
 				44EA9E861DDFEB3C003AAE0A /* LoadingViewController.m in Sources */,
 				44A7BC4A1DDCF6BE006C8C1E /* LightYourWords.xcdatamodeld in Sources */,
+				44E8798E1DE33E8800A14C57 /* DDASLLogger.m in Sources */,
+				44E879911DE33E8800A14C57 /* DDTTYLogger.m in Sources */,
 				44EA9E901DDFF82B003AAE0A /* BridgePushLinkViewController.m in Sources */,
+				44E879951DE33EA700A14C57 /* Waver.m in Sources */,
+				44E8798D1DE33E8800A14C57 /* DDAbstractDatabaseLogger.m in Sources */,
+				44E879901DE33E8800A14C57 /* DDLog.m in Sources */,
 				44A7BC411DDCF6BE006C8C1E /* AppDelegate.m in Sources */,
+				44E879921DE33E8800A14C57 /* DispatchQueueLogFormatter.m in Sources */,
 				44A7BC631DDCFF08006C8C1E /* LightsViewController.m in Sources */,
 				44EA9E8B1DDFF181003AAE0A /* BridgeSelectionViewController.m in Sources */,
 				44A7BC3E1DDCF6BE006C8C1E /* main.m in Sources */,
+				44E8798C1DE33E8800A14C57 /* ContextFilterLogFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +463,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Framework",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = LightYourWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -501,6 +488,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Framework",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = LightYourWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

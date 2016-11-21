@@ -62,7 +62,7 @@
     [notificationManager registerObject:self withSelector:@selector(noLocalConnection) forNotification:NO_LOCAL_CONNECTION_NOTIFICATION];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Find Bridge" style:UIBarButtonItemStylePlain target:self action:@selector(findNewBridgeButtonAction)];
-    self.navigationItem.title = @"Quick Start" ;
+    self.navigationItem.title = @"QuickStart" ;
 
     self.fliteController = [[OEFliteController alloc] init];
     self.slt = [[Slt alloc] init];
@@ -83,6 +83,10 @@
     
     [self loadConnectedBridgeValues];
     
+}
+
+- (void)noLocalConnection {
+    NSLog(@"No local connection");
 }
 
 - (void)loadConnectedBridgeValues{

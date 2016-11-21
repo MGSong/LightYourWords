@@ -56,7 +56,17 @@
 }
 
 - (void)authenticationSuccess {
+    /***************************************************
+     The notification PUSHLINK_LOCAL_AUTHENTICATION_SUCCESS_NOTIFICATION
+     was received. We have confirmed the bridge.
+     De-register for notifications and call
+     pushLinkSuccess on the delegate
+     *****************************************************/
+    // Deregister for all notifications
+    [[PHNotificationManager defaultManager] deregisterObjectForAllNotifications:self];
     
+    // Inform delegate
+    [self.delegate pushLinkSuccess];
 }
 
 /**

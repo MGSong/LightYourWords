@@ -369,7 +369,7 @@
 /**
  Delegate method for PHBridgePushLinkViewController which is invoked if the pushlinking was successfull
  */
-- (void)pushlinkSuccess {
+- (void)pushLinkSuccess {
     /***************************************************
      Push linking succeeded we are authenticated against
      the chosen bridge.
